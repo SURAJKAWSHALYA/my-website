@@ -78,8 +78,8 @@
 /* ===== BIG IMAGE FRAME ===== */
 
 .about-img-card{
-    width:400px;
-    height:600px;
+    width:min(100%, 400px);
+    aspect-ratio:4 / 5;
     border-radius:35px;
     overflow:hidden;
     position:relative;
@@ -119,13 +119,13 @@
 
 .about-exp-card{
     position:absolute;
-    bottom:-20px;
-    right:10px;
+    bottom:12px;
+    right:12px;
 
     background:rgba(15,23,42,0.95);
     backdrop-filter:blur(10px);
 
-    padding:20px 28px;
+    padding:16px 22px;
 
     border-radius:22px;
 
@@ -135,7 +135,7 @@
 }
 
 .big-num{
-    font-size:2.2rem;
+    font-size:2rem;
     font-weight:700;
     color:#38bdf8;
 }
@@ -286,8 +286,7 @@
     }
 
     .about-img-card{
-        width:360px;
-        height:540px;
+        width:min(100%, 360px);
     }
 }
 
@@ -295,15 +294,21 @@
 
     .about-grid{
         grid-template-columns:1fr;
-        text-align:center;
+        text-align:left;
+        gap:32px;
     }
 
     .about-image-wrap{
-        margin-bottom:50px;
+        width:100%;
+        margin-bottom:24px;
+    }
+
+    .about-img-card{
+        width:min(100%, 360px);
     }
 
     .skills-grid{
-        justify-content:center;
+        justify-content:flex-start;
     }
 
     .goal-card{
@@ -314,36 +319,48 @@
         font-size:2.5rem;
     }
 
-    .about-img-card{
-        width:380px;
-        height:560px;
+    .about-text{
+        text-align:left;
     }
 }
 
 @media(max-width:600px){
 
     #about{
-        padding:80px 5%;
+        padding:72px 5%;
+    }
+
+    .about-grid{
+        gap:24px;
+    }
+
+    .about-image-wrap{
+        margin-bottom:18px;
     }
 
     .about-img-card{
         width:100%;
-        max-width:380px;
-        height:520px;
+        max-width:320px;
     }
 
     .section-title{
         font-size:2rem;
     }
 
+    .about-text{
+        font-size:1rem;
+        line-height:1.8;
+    }
+
     .goal-card{
         flex-direction:column;
+        padding:22px;
     }
 
     .about-exp-card{
-        right:50%;
-        transform:translateX(50%);
-        bottom:-25px;
+        right:12px;
+        bottom:12px;
+        padding:12px 16px;
     }
 }
 
